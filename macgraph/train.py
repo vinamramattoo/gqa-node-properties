@@ -60,10 +60,8 @@ if __name__ == "__main__":
 	train_size = sum(1 for _ in tf.python_io.tf_record_iterator(args["train_input_path"]))
 	logger.info(f"Training on {train_size} records")
 
-	hr()
 	train(args)
 
-	hr()
 	predict(args, args)
 
 

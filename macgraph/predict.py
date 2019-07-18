@@ -81,7 +81,7 @@ def predict(args, cmd_args):
 					)
 				))
 		
-		hr()
+
 
 	def decode_row(row):
 		for i in ["type_string", "actual_label", "predicted_label", "src"]:
@@ -133,7 +133,7 @@ if __name__ == "__main__":
 	with tf.gfile.GFile(os.path.join(cmd_args["model_dir"], "config.yaml"), "r") as file:
 		frozen_args = yaml.load(file)
 
-	hr()
+
 
 	predict(frozen_args, cmd_args)
 
